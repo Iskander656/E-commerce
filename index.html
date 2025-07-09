@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Store</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
+    <style>
+        .product-card img {
+            height: 300px;
+            object-fit: contain;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+            background: #000;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .hero-section h1,
+        .hero-section p {
+            color: white;
+        }
+
+        .intro-section {
+            background-color: #f5f5f7;
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: contain;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+
+        .card-title {
+            font-weight: 600;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card {
+            border: 2px solid #e5e5e5;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: #0d6efd;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
+        }
+
+        .product-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .product-card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card button {
+            margin-top: 1rem;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 2px solid #e5e5e5;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: #0d6efd;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: contain;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            flex-shrink: 0;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .card-body ul {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .card-body button {
+            align-self: flex-start;
+            /* или flex-end, если хочешь кнопку справа */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi-apple"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Apple Store</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">iPhones</a></li>
+                            <li><a class="dropdown-item" href="#">Macbooks</a></li>
+                            <li><a class="dropdown-item" href="#">iPads</a></li>
+                            <li><a class="dropdown-item" href="#">Apple Watch</a></li>
+                            <li><a class="dropdown-item" href="#">AirPods</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="iPhone 16 Pro Max"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <div class="container">
+            <i class="bi-apple display-4"></i>
+            <h1 class="display-4 pt-3">Discover Innovation with Apple</h1>
+            <p class="lead pt-2">Powerful, elegant, and designed for your lifestyle.</p>
+            <a href="#" class="btn btn-outline-light btn-lg mt-3">Explore Products</a>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="intro-section py-5">
+        <div class="container-xl">
+            <h1 class="text-center mb-4 display-5 text-dark fw-bold">iPhone Lineup</h1>
+            <h2 class="text-center mb-4">Meet the new iPhone 16 Series</h2>
+            <p class="text-center fs-5">Designed for Apple Intelligence and the modern user.</p>
+            <div class="text-center pb-4">
+                <button class="btn btn-outline-primary btn-lg rounded-5">Learn More</button>
+                <button class="btn btn-outline-dark btn-lg rounded-5">Shop Now</button>
+            </div>
+            <div class="text-center">
+                <img src="img/modal_trade_in_variant__ejij0q8th06e_large.jpg" alt="iPhone Banner"
+                    class="bg-white img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="py-5">
+        <div class="container-xl">
+            <div class="text-center mb-5">
+                <i class="bi-apple display-4"></i>
+                <h1 class="display-5">Featured Products</h1>
+            </div>
+            <div class="row g-4">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/W57N8_SQ1_0000000004_BLACK_SLf.webp" class="card-img-top" alt="iPhone 16 Pro">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-phone"></i> iPhone 16 Pro</h5>
+                                <ul>
+                                    <li>Powerful A17 Bionic chip</li>
+                                    <li>6.1" Super Retina XDR display</li>
+                                    <li>Triple 48MP camera system</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$999.99</s></p>
+                                <p class="text-danger fw-bold">$899.99</p>
+                                <p class="text-dark">Storage: 128GB</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/M10270376_black.webp" class="card-img-top" alt="iPhone 16">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-phone"></i> iPhone 16</h5>
+                                <ul>
+                                    <li>A17 Bionic chip</li>
+                                    <li>6.1" Super Retina XDR display</li>
+                                    <li>Dual 12MP camera system</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$899.99</s></p>
+                                <p class="text-danger fw-bold">$799.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/W57N8_SQ1_0000000004_BLACK_SLf.webp" class="card-img-top"
+                                alt="iPhone 16 Pro Max">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-phone"></i> iPhone 16 Pro Max</h5>
+                                <ul>
+                                    <li>A17 Bionic chip</li>
+                                    <li>6.7" Super Retina XDR display</li>
+                                    <li>Triple 48MP camera system with LiDAR</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$1199.99</s></p>
+                                <p class="text-danger fw-bold">$999.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/p5zs9lbfpiwe4h468lwjqe9rdizwuvpk.jpg" class="card-img-top" alt="iPhone 16">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-phone"></i> iPhone 16</h5>
+                                <ul>
+                                    <li>A17 Bionic chip</li>
+                                    <li>6.1" Super Retina XDR display</li>
+                                    <li>Dual 12MP camera system</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$899.99</s></p>
+                                <p class="text-danger fw-bold">$799.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/iphone-card-40-iphone16prohero-202409_FMT_WHH.jpeg" class="card-img-top"
+                                alt="iPhone 16 Pro">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-phone"></i> iPhone 16 Pro</h5>
+                                <ul>
+                                    <li>A17 Bionic chip</li>
+                                    <li>6.1" Super Retina XDR display</li>
+                                    <li>Triple 48MP camera system</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$899.99</s></p>
+                                <p class="text-danger fw-bold">$799.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/images-17.jpeg" class="card-img-top" alt="Watch 9 SERIES">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-smartwatch"></i> Watch 9 SERIES</h5>
+                                <ul>
+                                    <li>Always-On Retina display</li>
+                                    <li>Health monitoring</li>
+                                    <li>Improved battery life</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$799.99</s></p>
+                                <p class="text-danger fw-bold">$699.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/utsya4de5dqh5yhc07gys03t0sz1aopj.jpg" class="card-img-top"
+                                alt="MacBook Air M4">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-laptop"></i> MacBook Air M4</h5>
+                                <ul>
+                                    <li>Apple M4 chip for lightning speed</li>
+                                    <li>13.6-inch Liquid Retina display</li>
+                                    <li>Up to 18 hours battery life</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$1199.99</s></p>
+                                <p class="text-danger fw-bold">$1099.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/planshet_new_3.png" class="card-img-top"
+                                alt="iPad Pro 12.9">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-tablet"></i> iPad Pro 13</h5>
+                                <ul>
+                                    <li>M4 Chip with Neural Engine</li>
+                                    <li>Liquid Retina XDR display</li>
+                                    <li>Thunderbolt port for accessories</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$1099.99</s></p>
+                                <p class="text-danger fw-bold">$999.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="img/airpods-pro-2022.jpeg" class="card-img-top"
+                                alt="AirPods Pro 2nd Gen">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi-headphones"></i> AirPods Pro 2nd Gen</h5>
+                                <ul>
+                                    <li>Active Noise Cancellation</li>
+                                    <li>Adaptive Transparency</li>
+                                    <li>Up to 6 hours listening time</li>
+                                </ul>
+                                <p class="text-muted mb-1"><s>$249.99</s></p>
+                                <p class="text-danger fw-bold">$199.99</p>
+                                <button class="btn btn-outline-primary">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 MyShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
