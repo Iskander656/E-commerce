@@ -7,131 +7,7 @@
     <title>Apple Store</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="icons/bootstrap-icons.min.css">
-    <style>
-        .product-card img {
-            height: 300px;
-            object-fit: contain;
-            padding: 1rem;
-            background-color: #f8f9fa;
-        }
-
-        .hero-section {
-            background: #000;
-            color: white;
-            padding: 80px 0;
-        }
-
-        .hero-section h1,
-        .hero-section p {
-            color: white;
-        }
-
-        .intro-section {
-            background-color: #f5f5f7;
-        }
-
-        .card-img-top {
-            height: 300px;
-            object-fit: contain;
-            padding: 1rem;
-            background-color: #f8f9fa;
-        }
-
-        .card-title {
-            font-weight: 600;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-primary {
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-primary:hover {
-            background-color: #0d6efd;
-            color: white;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .product-card {
-            border: 2px solid #e5e5e5;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            border-color: #0d6efd;
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
-        }
-
-        .product-card .card-body {
-            padding: 1.5rem;
-        }
-
-        .product-card ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .product-card button {
-            margin-top: 1rem;
-        }
-
-        .product-card {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            border: 2px solid #e5e5e5;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            border-color: #0d6efd;
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
-        }
-
-        .card-img-top {
-            height: 300px;
-            object-fit: contain;
-            padding: 1rem;
-            background-color: #f8f9fa;
-            flex-shrink: 0;
-        }
-
-        .card-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 1.5rem;
-        }
-
-        .card-body ul {
-            flex-grow: 1;
-            margin-bottom: 1rem;
-        }
-
-        .card-body button {
-            align-self: flex-start;
-            /* или flex-end, если хочешь кнопку справа */
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -145,6 +21,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-outline-dark" href="#">Login</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -168,13 +48,24 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="iPhone 16 Pro Max"
-                        aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#">
+                            <i class="bi-cart-fill fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <button class="btn btn-outline-secondary ms-2" id="toggleDark">
+            <i class="bi-moon"></i>
+        </button>
+
     </nav>
 
     <!-- Hero Section -->
@@ -226,7 +117,8 @@
                                 <p class="text-muted mb-1"><s>$999.99</s></p>
                                 <p class="text-danger fw-bold">$899.99</p>
                                 <p class="text-dark">Storage: 128GB</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -243,7 +135,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$899.99</s></p>
                                 <p class="text-danger fw-bold">$799.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -261,7 +154,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$1199.99</s></p>
                                 <p class="text-danger fw-bold">$999.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -278,7 +172,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$899.99</s></p>
                                 <p class="text-danger fw-bold">$799.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -296,7 +191,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$899.99</s></p>
                                 <p class="text-danger fw-bold">$799.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -313,7 +209,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$799.99</s></p>
                                 <p class="text-danger fw-bold">$699.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -330,15 +227,15 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$1199.99</s></p>
                                 <p class="text-danger fw-bold">$1099.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="card product-card">
-                            <img src="img/planshet_new_3.png" class="card-img-top"
-                                alt="iPad Pro 12.9">
+                            <img src="img/planshet_new_3.png" class="card-img-top" alt="iPad Pro 12.9">
                             <div class="card-body">
                                 <h5 class="card-title"><i class="bi-tablet"></i> iPad Pro 13</h5>
                                 <ul>
@@ -348,15 +245,15 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$1099.99</s></p>
                                 <p class="text-danger fw-bold">$999.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="card product-card">
-                            <img src="img/airpods-pro-2022.jpeg" class="card-img-top"
-                                alt="AirPods Pro 2nd Gen">
+                            <img src="img/airpods-pro-2022.jpeg" class="card-img-top" alt="AirPods Pro 2nd Gen">
                             <div class="card-body">
                                 <h5 class="card-title"><i class="bi-headphones"></i> AirPods Pro 2nd Gen</h5>
                                 <ul>
@@ -366,7 +263,8 @@
                                 </ul>
                                 <p class="text-muted mb-1"><s>$249.99</s></p>
                                 <p class="text-danger fw-bold">$199.99</p>
-                                <button class="btn btn-outline-primary">Order Now</button>
+                                <a href="product.html?id=1" class="btn btn-outline-primary">Order Now</a>
+
                             </div>
                         </div>
                     </div>
@@ -375,6 +273,52 @@
             </div>
         </div>
     </section>
+    <!-- Stats Section -->
+    <section class="bg-light py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="fw-bold">10K+</h3>
+                    <p>Products Sold</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">98%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">24/7</h3>
+                    <p>Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-5 bg-secondary-subtle">
+        <div class="container-xl">
+            <h2 class="text-center mb-5 fw-bold">What Customers Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow rounded">
+                        <p>"Absolutely love my new iPhone 16 Pro! The camera is insane."</p>
+                        <h6 class="text-end fw-bold">— Sarah T.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow rounded">
+                        <p>"Fast delivery, quality products. Will shop again."</p>
+                        <h6 class="text-end fw-bold">— Jamal K.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow rounded">
+                        <p>"MacBook Air M4 is a beast. Excellent for work and design."</p>
+                        <h6 class="text-end fw-bold">— Elif G.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 text-center">
@@ -385,22 +329,8 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        const cards = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+    <script src="js/main.js"></script>
 
-        cards.forEach(card => {
-            observer.observe(card);
-        });
-    </script>
 </body>
 
 </html>
